@@ -80,6 +80,13 @@ contact.html の送信成功時に GA4 へ直接 `generate_lead` を送信する
 - form_id = contact_main
 - lead_type = inquiry
 - page_path = window.location.pathname
+- cta_click の初回実装を追加。
+[data-cta] 属性を持つ主要CTAクリック時に GA4 へ `cta_click` を直接送信。
+送信パラメータ：
+- cta_name
+- cta_location
+- cta_text
+- page_path
 ---
 
 ## 5. Event Table
