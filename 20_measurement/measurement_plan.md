@@ -74,7 +74,12 @@
 - Download page: TBD
 - generate_lead は同一ページ内の成功メッセージ `#successMessage` を Element Visibility で検知する方針に確定。
 Trigger は Once per page + Observe DOM changes を採用。
-
+generate_lead の初回実装完了。
+contact.html の送信成功時に GA4 へ直接 `generate_lead` を送信する方式で実装。
+送信成功UI表示と同時に以下パラメータで発火確認：
+- form_id = contact_main
+- lead_type = inquiry
+- page_path = window.location.pathname
 ---
 
 ## 5. Event Table
