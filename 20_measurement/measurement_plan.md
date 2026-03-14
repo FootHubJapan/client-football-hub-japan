@@ -27,9 +27,7 @@
   - Form page: https://football-hub-japan-ubzb.onrender.com/contact.html
   - Thank you: N/A
 - Success condition:
-  - contact.html 上で送信後に成功メッセージが表示された時点で発火
-- Notes:
-  - 現状は同一ページ内の成功UIで判定する
+  - contact.html 上で送信後に成功メッセージ `#successMessage` が表示された時点で発火
 
 ---
 
@@ -74,6 +72,8 @@
 - Form page: https://football-hub-japan-ubzb.onrender.com/contact.html
 - Thank you page: TBD
 - Download page: TBD
+- generate_lead は同一ページ内の成功メッセージ `#successMessage` を Element Visibility で検知する方針に確定。
+Trigger は Once per page + Observe DOM changes を採用。
 
 ---
 
