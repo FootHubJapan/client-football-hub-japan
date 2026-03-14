@@ -24,17 +24,10 @@
 - Trigger (fallback): Thank you page page_view
 - Page URL:
   - Main LP: https://football-hub-japan-ubzb.onrender.com/
-  - Form page: TBD
+  - Form page: https://football-hub-japan-ubzb.onrender.com/contact.html
   - Thank you: TBD
 - Success condition:
-  - 送信成功が確定した時点で発火（未送信 / バリデーションエラーでは発火しない）
-- Parameters:
-  - form_id: contact_main
-  - page_path: {{Page Path}}
-  - lead_type: inquiry
-- Notes:
-  - URL依存を避け、可能なら成功DOM or 送信成功イベントで発火
-  - 二重計測防止を考慮
+  - 送信成功が確定した時点で発火
 
 ---
 
