@@ -76,7 +76,7 @@
 
 ## 4. URLs
 - Main LP: https://football-hub-japan-ubzb.onrender.com/
-- Form page: TBD
+- Form page: https://football-hub-japan-ubzb.onrender.com/contact.html
 - Thank you page: TBD
 - Download page: TBD
 
