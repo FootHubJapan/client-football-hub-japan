@@ -87,6 +87,11 @@ contact.html の送信成功時に GA4 へ直接 `generate_lead` を送信する
 - cta_location
 - cta_text
 - page_path
+- form_start を初回実装。
+contactForm 内の input / textarea / select へ初回フォーカス時に GA4 へ `form_start` を直接送信。
+送信パラメータ：
+- form_id = contact_main
+- page_path = window.location.pathname
 ---
 
 ## 5. Event Table
