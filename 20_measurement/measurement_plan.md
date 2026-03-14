@@ -20,14 +20,16 @@
 
 ### generate_lead
 - Purpose: 問い合わせ送信完了（本命CV）
-- Trigger (preferred): Success UI表示（送信完了メッセージ / 完了モーダル / 成功イベント）
-- Trigger (fallback): Thank you page page_view
+- Trigger (preferred): Success UI表示（同一ページ内の成功メッセージ表示）
+- Trigger (fallback): N/A（現状はThank you pageなし）
 - Page URL:
   - Main LP: https://football-hub-japan-ubzb.onrender.com/
   - Form page: https://football-hub-japan-ubzb.onrender.com/contact.html
-  - Thank you: TBD
+  - Thank you: N/A
 - Success condition:
-  - 送信成功が確定した時点で発火
+  - contact.html 上で送信後に成功メッセージが表示された時点で発火
+- Notes:
+  - 現状は同一ページ内の成功UIで判定する
 
 ---
 
