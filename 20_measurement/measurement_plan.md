@@ -10,7 +10,7 @@
   - cta_click（CTAクリック）
   - phone_tap（電話タップ）
   - download_brochure（資料DL ※ある場合）
-- Last Updated: 2026-03-14
+- Last Updated: 2026-03-15
 - Owner: Tracking & Measurement Specialist
 - Approver (Production publish): Yuki Isomura
 
@@ -74,12 +74,9 @@
 - Download page: TBD
 - generate_lead は同一ページ内の成功メッセージ `#successMessage` を Element Visibility で検知する方針に確定。
 Trigger は Once per page + Observe DOM changes を採用。
-generate_lead の初回実装完了。
-contact.html の送信成功時に GA4 へ直接 `generate_lead` を送信する方式で実装。
-送信成功UI表示と同時に以下パラメータで発火確認：
-- form_id = contact_main
-- lead_type = inquiry
-- page_path = window.location.pathname
+generate_lead の実装方針を確定。
+- contact.html 側では「送信成功UI（#successMessage）」の表示のみを行う
+- generate_lead は GTM の Element Visibility（#successMessage）で検知して発火（誤認発火防止のため、フォームJSからの直接送信はしない）
 - cta_click の初回実装を追加。
 [data-cta] 属性を持つ主要CTAクリック時に GA4 へ `cta_click` を直接送信。
 送信パラメータ：
@@ -97,7 +94,7 @@ contactForm 内の input / textarea / select へ初回フォーカス時に GA4 
 ## 5. Event Table
 | Event Name | Type | Trigger (preferred / fallback) | URL/Page | Parameters | Priority | Status |
 |---|---|---|---|---|---|---|
-| generate_lead | Primary CV | success UI / thankyou page_view | Form/Thankyou | form_id, page_path, lead_type | High | Planned |
+| generate_lead | Primary CV | success UI / thankyou page_view | Form/Thankyou | form_id, page_path, lead_type | High | Implemented |
 | form_start | Secondary CV | form visible / form page_view | Form | form_id, page_path | Medium | Planned |
 | cta_click | Secondary CV | CTA click | Any | cta_text, cta_location, page_path | Medium | Planned |
 | phone_tap | Secondary CV | tel: click | Any | phone_number, page_path | Medium | Planned |
